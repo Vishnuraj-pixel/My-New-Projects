@@ -1,0 +1,197 @@
+:root{
+    --primary: rgba(204, 84, 51, 0.12);
+    --secondary: rgba(34, 7, 75, 0.65);
+}
+:root{
+    --primary1:rgba(195, 55, 99, 0.81);
+    --secondary1:rgba(29, 38, 114, 0.77);
+}
+body{
+    font-family: 'Karantina', cursive;
+    margin: 0;
+    padding: 0;
+}
+#container{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(135deg, var(--primary), var(--secondary)),
+           url(background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.circle{
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    height: 300px;
+    width: 300px;
+    background-color:#ffffff;
+    border-radius: 50%;
+    box-shadow: 5px;
+}
+h1{
+    position:absolute;
+    top: 25%;
+    left: 19.2%;
+    font-family: 'KoHo', sans-serif;
+    font-size: 16px;
+    font-weight: 1200;
+}
+h2{
+    position: absolute;
+    top: 8%;
+    left: 17%;
+    font-size:120px;
+    color:#d4042e;
+}
+h3{
+    position: absolute;
+    top: 38%;
+    left: 23%;
+    font-family: 'KoHo', sans-serif;
+    font-weight: bold;
+}
+#calculator{
+    width: 300px;
+    height: 545px;
+    position: relative;
+    margin: 0 auto;
+    background-image: linear-gradient(135deg, var(--primary1), var(--secondary1));
+    top: 20px;
+    left: 330px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.8), 0 6px 30px 0 rgba(0, 0, 0, 0.19);
+    border-spacing: 20px;
+}  
+#Color-Red{
+    width: 300px;
+    height: 180px;
+    position: absolute;
+    margin: 0 auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-overflow: none;
+}
+#result{
+    height: 70px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color:#ffffff;
+    font-family: 'Orbitron', sans-serif;
+    margin: 0px;
+    font-size:18;
+}
+#indicator{
+    height: 30px;
+    width: 55px;
+    color:wheat;
+    border-radius: 10px;
+    position: absolute;
+    top: 0px;
+    left: 170px;
+    font-size: 16;
+    text-align:right;
+}
+#history{
+    text-align: right; 
+    margin: 0px 20px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 18;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-top: 20px;
+    font-size: 22px;
+    color:#ffffff;
+}
+#output{
+    height: 50%;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 30;
+    font-size-adjust: 20px number;
+    overflow: visible;
+    text-overflow: ellipsis;
+    color:#cf7200;
+    animation-name: zoomOut;
+    height: 70px;
+    margin: 0px 20px;
+    text-align-last: right;
+}
+@keyframes zoomOut {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+#keyboard{
+    position: relative;
+    top: 150px;
+    align-content:space-between;
+    padding: 15px;
+    padding-top: 17px;
+}
+.operator, .number{
+    width: 55px;
+    height: 55px;
+    margin: 5px;
+    float: center;
+    background-image: linear-gradient(-45deg, var(--primary1), var(--secondary1));
+    box-shadow: 2px 2px 5px 0 rgba(195, 55, 99, 0.81), rgba(255,255,255,0.25);
+    border-radius: 50px;
+    border-width: 0;
+    font-weight: bold;
+    font-size: 13;
+    font-family: 'Dosis', sans-serif;
+    padding: 1rem;
+}
+.operator, .number{
+    cursor: pointer;
+}
+.operator:focus, .number:focus{
+    outline-color: 5;
+}
+.operator:hover:active, .number:hover:active{
+    background: linear-gradient(135deg, rgba(195, 55, 99, 0.91), rgba(195, 55, 99, 0.91));
+    -webkit-box-shadow: 2px 2px 5px rgba(195, 55, 99, 0.81), -2px -2px 5px rgba(255,255,255,0.25);
+}
+button:nth-child(1){
+    font-size: 20;
+}
+button:nth-child(2){
+    font-size: 20;
+}
+button:nth-child(3){
+    font-size: 20;
+}
+button:nth-child(4){
+    font-size: 20;
+}
+button:nth-child(8){
+    font-size: 20;
+}
+button:nth-child(12){
+    font-size: 20;
+}
+button:nth-child(16){
+    font-size: 20;
+}
+button:nth-child(20){
+    font-size: 20;
+}
+@media(max-width: 500px){
+    .circle{
+        display: block;
+    }
+    h1{
+        display: block;
+    }
+    h2{
+        display: block;
+    }
+    h3{
+        display: block;
+    }
+    #calculator{    
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%)  
+    }       
+}
